@@ -1,0 +1,44 @@
+<style>
+  .fixed{
+    visibility:hidden;
+  }
+</style>
+
+<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-5 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h2 class="fw-bold mb-0">회원가입</h2>
+         {{#each alert}}
+            <div class="alert alert-danger">
+              {{this}}
+            </div>
+         {{/each}}
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form method="post" action="/create">
+          <div class="form-floating mb-3">
+            <input name="user_email" class="form-control email" type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">이메일</label>
+          </div>
+  
+
+          <div class="form-floating mb-3">
+            <input name="user_password" type="password" class="form-control rounded-4 pw1" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">패스워드(입력 시 가려집니다)</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input name="" type="password" class="form-control rounded-4 pw2" id="floatingPassword" placeholder="Password">
+            <label for="">패스워드 재입력(입력 시 가려집니다)</label>
+            <div class="w-100 mb-2 btn btn-lg rounded-4 btn-dark" id="checkPass">패스워드 확인</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input name="user_major" class="form-control" type="major" class="form-control rounded-4" placeholder="major">
+            <label for="floatingPassword">소속 단과대학((ex)컴퓨터공학과 => IT융합대학)</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="btn-market-search" type="submit">회원가입</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

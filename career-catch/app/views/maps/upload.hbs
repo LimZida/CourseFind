@@ -1,0 +1,65 @@
+
+  <head>
+    <!-- Customer CSS  -->
+    <link rel="stylesheet" href="/assets/css/upload.css" />
+  </head>
+  <body>
+    <div>
+      <!-- Navigation-->
+      <nav class="navbar navbar-light bg-dark fixed-top">
+        <div class="container">
+          <div><a class="btn btn-outline-primary" href="/majors/main">메인화면으로</a></div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 카카오 지도 표시 -->
+    <div id="map"></div>
+
+    {{!-- 검색창열기 --}}
+    <button class="fixed2 unvisible"><div class="fontSize">검색창 열기</div></button>
+    <!-- 키워드 검색창과 검색 결과 보여주기 -->
+    <div id="menu_wrap" class="box">
+      <button class="click">X</button>
+      <!-- return false; 새로 고침이 발생하지 않도록 선언 -->
+      <form
+        class="form-inline my-2 my-lg-0"
+        onsubmit="searchPlaces(); return false;"
+        action=""
+      >
+
+        <input
+          id="keyword"
+          class="form-control mr-sm-2"
+          type="text"
+          value="가천대학교 {{major}}"
+        />
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+          검색하기
+        </button>
+      </form>
+      <hr />
+
+      <div id="placesList">
+        <!-- 검색 결과 list -->
+      </div>
+      <hr />
+
+      <div id="pagination">
+        <!-- pagination -->
+      </div>
+    </div>
+
+    <!-- jQuery CDN  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Kakao CDN -->
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9c421a7f41490007153c6c4e79a774fa&libraries=services"></script>
+
+    <!-- Customer Script  -->
+    <script src="/assets/js/upload.js"></script>
+  </body>
+

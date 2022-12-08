@@ -1,0 +1,131 @@
+<!-- view 메인 템플릿 -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>가천대 진로탐색 프로젝트</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+
+    
+
+    {{!-- css 링크 --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark nav">
+      <div class="container">
+        <a
+          class="navbar-brand btn btn-outline-primary"
+          href="#"
+        >{{pageTitle}}</a>
+        <li
+         class="navbar-toggler nav-item dropdown"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <a class="nav-link mr-auto navbar-toggler-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {{#if isUserLogedIn}}
+              <li class="dropdown-item"><a
+                  class="nav-link btn btn-outline-primary mr-0"
+                  href="/logout"
+                >로그아웃</a></li>
+              <li class="dropdown-item"><a
+                  class="nav-link btn btn-outline-primary mr-0"
+                  href="/maps/upload"
+                >캠퍼스맵</a></li>
+            {{else}}
+              <li class="dropdown-item"><a
+                  class="nav-link btn btn-outline-primary mr-0"
+                  href="/signup"
+                >회원가입</a></li>
+              <li class="dropdown-item"><a
+                  class="nav-link btn btn-outline-primary mr-0"
+                  href="/login"
+                >로그인</a></li>
+            {{/if}}
+            {{#if inSub}}
+              <li class="dropdown-item"><a
+                  class="nav-link btn btn-outline-primary mr-0"
+                  href="/majors/main"
+                >메인화면으로</a></li>
+            {{/if}}
+          </ul>
+        </li>
+       
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto"></ul>
+          <ul class="navbar-nav">
+            {{#if isUserLogedIn}}
+              <li class="nav-item mr-1"><a
+                  class="nav-link btn btn-outline-primary"
+                  href="/logout"
+                >로그아웃</a></li>
+              <li class="nav-item mr-1"><a
+                  class="nav-link btn btn-outline-primary"
+                  href="/maps/upload"
+                >캠퍼스맵</a></li>
+            {{else}}
+              <li class="nav-item mr-1"><a
+                  class="nav-link btn btn-outline-primary"
+                  href="/signup"
+                >회원가입</a></li>
+              <li class="nav-item mr-1"><a
+                  class="nav-link btn btn-outline-primary"
+                  href="/login"
+                >로그인</a></li>
+            {{/if}}
+            {{#if inSub}}
+              <li class="nav-item mr-1"><a
+                  class="nav-link btn btn-outline-primary"
+                  href="/majors/main"
+                >메인화면으로</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      {{!-- 메인 내용들이 들어갈 공간 --}}
+      {{{body}}}
+
+    <button class="fixed"><div class="fontSize">채팅하기</div></button>
+
+    <div class="chatbox unvisible">
+        <button class="click">X</button>
+        <div class="chatbox2">
+        </div>
+        <div>
+          <textarea class="input" placeholder="명령어 목록) !공통자격증 !전과 !인기과 !복수전공 !부전공 !전공심화 !신청기간 !제작자"></textarea>
+          <img class="btn2" src="https://cdn-icons-png.flaticon.com/512/881/881955.png" alt="" width="20%">
+        </div>
+    </div>
+
+    <div class="rmt-scroll">
+      <img class="up" src="https://cdn-icons-png.flaticon.com/512/6327/6327843.png" width="100%" alt=""></img>
+      <img class="down" src="https://cdn-icons-png.flaticon.com/512/25/25623.png" width="100%" alt=""></img>
+    </div> 
+
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
+<!--'Noto Sans Korean', sans-serif-->

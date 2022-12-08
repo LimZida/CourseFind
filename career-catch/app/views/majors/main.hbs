@@ -1,0 +1,327 @@
+{{!-- 단과대학 제시하는 화면 --}}
+
+  <head>
+
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    body {
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    }
+
+    /* 슬라이드 쇼 */
+    .carousel {
+    margin-bottom: 4rem;
+    }
+    
+    .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    }
+
+    .carousel-item {
+    height: 60rem;
+    }
+
+    .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 60rem;
+    }
+
+     @media screen and (max-width:767px) and (min-width:577px){
+        .carousel-item {
+      height: 40rem;
+      }
+
+        .carousel-item > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 40rem;
+      }
+      
+    }
+
+     @media (max-width:576px) {
+        .carousel-item {
+      height: 30rem;
+      }
+
+        .carousel-item > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 30rem;
+      }
+      
+    }
+
+    /*단과대 제시 화면*/
+    .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    }
+    .marketing h2 {
+    font-weight: 400;
+    }
+    .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+    }
+    
+
+
+    /* 프로그램 제시화면 */
+
+    .featurette-divider {
+    margin: 5rem 0; 
+    }
+
+    
+    .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+  
+    letter-spacing: -.05rem;
+    }
+
+    .text-muted{
+        font-size: 1.75rem;
+    }
+    h2,button{
+        margin-top: 1rem;
+    }
+
+    .font{
+        font-size: 1.25rem;
+    }
+    
+
+    @media (min-width: 40em) {
+   
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+    }
+
+    @media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+    }
+    </style>
+
+  </head>
+  <body>
+
+<main>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="{{post.background1}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="{{post.background2}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="{{post.background3}}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+  
+
+  <div class="container marketing">
+
+   
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image}}" alt="" width="50%">
+        <h2>경영대학</h2>
+        <form method="get" action="/majors/managements/management">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">경영대학은 전문지식을 갖추고 글로벌마인드와 인성을 겸비한 창의적인 차세대 경영인재 양성을 목표로 한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image2}}" alt="" width="50%"> 
+        <h2>사회과학대학</h2>
+        <form method="get" action="/majors/socialsciences/media">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">사회과학대학은 각각의 학문단위에서 전문적인 분석능력과 실질적인 문제 해결능력을 배양하고 지성이 충만한 전문인을 지향한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image3}}" alt="" width="50%">
+        <h2>인문대학</h2>
+        <form method="get" action="/majors/humans/korean">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">인문대학은 사람다움을 이해하는 인문인, 문화를 누리며 창조하는 인문인, 세계인과 함께하는 인문인의 양성을 교육목적으로 삼는다. </p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image4}}" alt="" width="50%">
+        <h2>법과대학</h2>
+        <form method="get" action="/majors/laws/law">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">법과대학은 국가와 지역사회가 요구하는 법률전문가의 양성과 더불어 국가와 지방자치단체에 봉사하는 유능한 공무원을 양성하는 것을 목표로 한다. </p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image5}}" alt="" width="50%">
+        <h2>공과대학</h2>
+        <form method="get" action="/majors/engineerings/city">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">공과대학은 자연과학적 이론을 바탕으로 사회에서 필요로 하는 우수 기술인력을 양성하는데에 교육목표를 두고 학과별 특성을 고려하여 다양한 실천사항을 가지고 교육 및 연구에 임한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image6}}" alt="" width="50%">
+        <h2>바이오나노대학</h2>
+        <form method="get" action="/majors/bios/bionano">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">바이오나노대학에서는 다양한 지식을 가진 바이오나노 융합기술 분야의 전문인력과 창의적 사고 능력과 미래 지향적 가치관을 지닌 탐구적 지성인을 양성하는 것을 목표로 한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image7}}" alt="" width="50%">
+        <h2>IT융합대학</h2>
+        <form method="get" action="/majors/ITs/AI">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">IT융합대학에서는 급변하는 IT융합 환경에 능동적으로 대처하고, 국가와 국제사회에 기여할 수 있는 IT 전문가 양성을 실현하기 위해 다음과 같은 교육목표를 둔다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image8}}" alt="" width="50%">
+        <h2>한의과대학</h2>
+        <form method="get" action="/majors/medicals/medical">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">한의과대학에서는 동양철학과 자연원리를 기초로 우리민족 체질과 생활에 맞도록 학술이론과 임상기법을 접목한 의학체계인 한의학을 교육한다. </p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-lg-3" src="{{post.image9}}" alt="" width="50%">
+        <h2>예술/체육대학</h2>
+        <form method="get" action="/majors/arts/draw">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">예술/체육대학에서는 국제적 경쟁력을 확보하고 한국 예체능의 위상 향상과 새로운 문화 창출을 선도하기 위하여 체계적인 교육을 진행한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4 text-center">
+        <img class="rounded-lg-3" src="{{post.image10}}" alt="" width="50%">
+        <h2>미래산업대학</h2>
+        <form method="get" action="/majors/futureindustrys/medicalmachine">
+            <button type="submit" class="btn btn-secondary">학과 보기</button>
+        </form>
+        <p class="font">미래산업대학은 학문과 실무를 겸하여 산업 현장에서 즉시 업무가 가능한 실무형 전문 인재 양성을 목표로 한다.</p>
+      </div><!-- /.col-lg-4 -->
+
+    </div><!-- /.row -->
+
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">가천대학교 WIND 비교과 통합시스템,<span class="text-muted">  당신의 꿈을 펼치기 위한.</span></h2>
+        <p class="lead">다양한 비교과 프로그램에 참여하는 것은 자신의 진로를 위해 더 빠르게 달릴 수 있는 지름길입니다. 해당 사진을 클릭해보세요!</p>
+      </div>
+      <div class="col-md-5">
+        <form action="https://wind.gachon.ac.kr/">
+            <button type="submit" class="btn btn-secondary"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{post.linkImg1}}" alt=""width="500" height="500"></button>
+        </form>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">가천대학교 대학일자리 플러스센터/취업진로처. <span class="text-muted">진로와 취업에 대해 궁금하다면?</span></h2>
+        <p class="lead">프로그램부터 상담신청, 다양한 자료까지 진로찾기에 도움이 될 수 있는 서비스입니다. 해당 사진을 클릭해보세요!</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <form action="https://work.gachon.ac.kr/">
+            <button type="submit" class="btn btn-secondary"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{post.linkImg2}}" alt=""width="500" height="500"></button>
+        </form>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">가천대학교 아르테크네센터, <span class="text-muted"> 진로를 위한 실력을 쌓아보세요.</span></h2>
+        <p class="lead">다양한 분야의 공모전, 프로젝트, 경진대회를 통해 원하는 진로에 대한 자신의 역량을 충분히 쌓을 수 있습니다. 해당 사진을 클릭해보세요!</p>
+      </div>
+      <div class="col-md-5">
+          <form action="https://artechne.gachon.ac.kr/">
+            <button type="submit" class="btn btn-secondary"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{post.linkImg3}}" alt=""width="500" height="500"></button>
+          </form>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p>&copy;가천대학교 진로탐색 프로그램 &middot;</p>
+  </footer>
+</main>
+
+
+      
+  </body>
+

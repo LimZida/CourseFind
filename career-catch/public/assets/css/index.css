@@ -1,0 +1,408 @@
+
+*{
+    box-sizing: border-box;
+    font-family: Jua;
+}
+main{
+  overflow-x: hidden;
+}
+@font-face{
+    src: url("../png&type/BMJUA_ttf.ttf");
+    font-family:"Jua";
+  }
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+}
+
+/* table 영역 */
+
+table th{
+    text-align: center;
+    font-family: Jua;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+/* default 및 main,학과 */
+.b-example-divider {
+height: 3rem;
+background-color: rgba(0, 0, 0, .1);
+border: solid rgba(0, 0, 0, .15);
+border-width: 1px 0;
+box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 992px) {
+.rounded-lg-3 { border-radius: .3rem; }
+}
+
+li{
+font-size: 1.25rem;
+}
+.list{
+    margin-top: 20px;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+.fixed{
+z-index: 1000;
+position:fixed;
+left: 1.5vw;
+bottom: 2vh;
+background-color: #ccc;
+border-radius: 20px;
+box-shadow: 1.5px 1.5px 1.5px black;
+
+}
+
+.fixed:active{
+margin-left: 5px;
+margin-top: 5px;
+box-shadow: none;
+}
+
+.visible{
+visibility: visible;
+}
+
+.unvisible{
+visibility: hidden;
+}
+
+.chatbox{
+z-index: 100;
+border: 3px solid rgb(0, 0, 0);
+border-radius: 10px;
+background-color: white;
+width: 400px;
+height: 450px;
+position: fixed;
+left: 1.5vw;
+bottom: 1.5vh;
+}
+
+.chatbox2{
+    background-color: rgb(138, 138, 138);
+    border-radius: 10px;
+    width: 90%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.input{
+  margin-left: 15px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+}
+
+textarea{
+margin-bottom: 10px;
+width: 70%;
+height: 20%;
+font-size: 1.08rem;
+vertical-align: middle;
+}   
+
+.text{
+background-color: yellow;
+padding: 5px;
+font-size: 20px;
+}
+.lefttext{
+    border-radius: 10px 10px 10px 1px;
+    float: left;
+    text-align: left;
+    margin:5px 5px 10px 5px;
+    background-color: white;
+}
+.righttext{
+    float: right;
+    text-align: right;
+    margin:5px 5px 10px 5px;
+    border-radius: 10px 10px 1px 10px;
+}
+.btn2{
+  margin-top: 0px;
+  text-decoration: none;
+  border: none;
+  border: solid rgb(212, 212, 212) 1px;
+  border-radius: 10px;
+  display: inline;
+  width: 20%;
+  cursor: pointer;
+}
+
+.btn2:hover{
+  background-color: rgb(212, 212, 212);
+}
+
+.click{
+  margin-left: 86%;
+  margin-top: 2.5%;
+  background-color: #ccc;
+  border-radius: 20px;
+
+  box-shadow: 1.5px 1.5px 1.5px black;
+}
+
+.fixed:hover{
+  background-color: rgb(105, 104, 104);
+}
+
+.click:active{
+  margin-left: 86%;
+  box-shadow: none;
+}
+
+.fontSize{
+  font-size: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.25rem;
+}
+p{
+  font-size: 1.25rem;
+}
+
+.rmt-scroll{
+box-shadow: 2px 2px 6px 0px rgb(134, 134, 134);
+border-radius: 20px;
+position:fixed;
+top: 45%;
+right: 2vw;
+width: 50px;
+background-color: rgb(255, 255, 255);
+z-index: 2;
+visibility: hidden;
+opacity: 0;
+transition-duration: 0.5s;
+}
+
+
+.rmt-scroll.rmt-visible{
+    transition-duration: 1;
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+}
+
+.rmt-scroll img{
+margin: 1vh auto 1vh auto;
+border: rgb(66, 66, 66) solid 3px;
+border-radius: 10px;
+cursor: pointer;
+transition-duration: 0.3s;
+} 
+
+.nav{
+  position: fixed;
+	top: 0px;
+	left: 0px;
+  width: 100%;
+  z-index: 3;
+  transition-duration: 0.5s;
+}
+
+
+.shadow{
+  box-shadow: 50px 50px 50px #bfbfbf;
+}
+
+.nav-lift-up{
+  transition-property: transform;
+  transform: translateY(-100%);
+  transition-duration: 1.0s;
+}
+
+@media screen and (max-width:768px) {
+  .nav-lift-up{
+    transform: translateY(-400%);
+  }
+}
+
+.dropdown-menu{
+  margin: 0px 0px 0px -170%;
+}
+
+.dropdown-menu2{
+  margin: 0px 0px 0px 30% !important;
+}
+
+@media screen and (max-width:960px) {
+  .subject{
+    visibility: visible;
+  }
+  .subject-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:960px) {
+  .subject{
+    visibility: hidden;
+  }
+  .subject-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:1215px) {
+  .subject2{
+    visibility: visible;
+  }
+  .subject2-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:1215px) {
+  .subject2{
+    visibility: hidden;
+  }
+  .subject2-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:824px) {
+  .subject3{
+    visibility: visible;
+  }
+  .subject3-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:824px) {
+  .subject3{
+    visibility: hidden;
+  }
+  .subject3-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:680px) {
+  .subject4{
+    visibility: visible;
+  }
+  .subject4-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:680px) {
+  .subject4{
+    visibility: hidden;
+  }
+  .subject4-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:608px) {
+  .subject5{
+    visibility: visible;
+  }
+  .subject5-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:608px) {
+  .subject5{
+    visibility: hidden;
+  }
+  .subject5-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:540px) {
+  .subject6{
+    visibility: visible;
+  }
+  .subject6-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:540px) {
+  .subject6{
+    visibility: hidden;
+  }
+  .subject6-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .subject7{
+    visibility: visible;
+  }
+  .subject7-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:500px) {
+  .subject7{
+    visibility: hidden;
+  }
+  .subject7-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:405px) {
+  .subject8{
+    visibility: visible;
+  }
+  .subject8-fri{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width:405px) {
+  .subject8{
+    visibility: hidden;
+  }
+  .subject8-fri2{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .rmt-scroll{
+    width: 30px;
+    }
+}
+
+@media screen and (max-width:2056px) and (min-width:1024px) {
+  .rmt-scroll img:hover{
+    border: 3px solid white;
+    background-color: rgb(141, 141, 141);
+  }
+}
